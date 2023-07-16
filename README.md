@@ -1,0 +1,6 @@
+# SNS-INTERNSHIP-AGGREGATOR
+The Internship Aggregator project aims to create a centralized platform that aggregates internship opportunities from various sources and provides a streamlined interface for students .
+Internship Listings: The platform will collect internship listings from different sources such as company websites, job boards, and career portals. These listings will be regularly updated to ensure the availability of the latest opportunities.
+User Profiles: Students and job seekers can create personalized profiles, including their educational backgrounds, skills, and interests. These profiles will help in matching users with relevant internships and allow employers to find suitable candidates.
+Company Profiles: The platform will include profiles of participating companies and organizations, providing detailed information about their internship programs, company culture, and requirements. This will enable users to learn more about potential employers before applying.
+Feedback and Ratings: After completing an internship, users can provide feedback and ratings for the internship program and the host company. This information will help future applicants make more informed decisions and assist companies in improving their internship offerings.
