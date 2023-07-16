@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aggregator Page</title>
+  <style>
+    /* CSS styling for the aggregator page */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .header {
+    background-color: #4caf50;
+      background-color: ;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .content {
+      margin: 20px;
+    }
+    
+    .news-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #eeeaea;
+    }
+    
+    .news-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .news-description {
+      font-size: 14px;
+    background-color: #fafbfb;
+      color: ;
+    }
+    button{
+        background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Internship Aggregator</h1>
+    <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Profile.html">Profile</a></button>
+    <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Login.html">Log Out</a></button>
+  </div>
+  
+  <div class="content">
+    <div class="news-item">
+      <h2 class="news-title">DEVELOPER</h2>
+      <p class="news-description">Location:Coimbatore</p>
+      <p class="news-description">Stipened:25000/month</p>
+      <p class="news-description">Skills:Java,SQL</p>
+      <p class="news-description">Duration:5-6 Months</p>
+      <p class="news-description">Contact:7905675337</p>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Apply.html">APPLY NOW</a></button>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Rating.html">RATE THIS</a></button>
+
+
+
+    </div>
+    
+    <div class="news-item">
+      <h2 class="news-title">DESIGNER</h2>
+      <p class="news-description">Location:Coimbatore</p>
+      <p class="news-description">Stipened:15000/month</p>
+      <p class="news-description">Skills:Figma,Sketch,Adobe</p>
+      <p class="news-description">Duration:3-4 Months</p>
+      <p class="news-description">Contact:8805875887</p>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Apply.html">APPLY NOW</a></button>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Rating.html">RATE THIS</a></button>
+
+    </div>
+    
+    <div class="news-item">
+      <h2 class="news-title">SOFTWARE TESTING</h2>
+      <p class="news-description">Location:Coimbatore</p>
+      <p class="news-description">Stipened:15000/month</p>
+      <p class="news-description">Skills:Selenium,JUnit</p>
+      <p class="news-description">Duration:6-7 Months</p>
+      <p class="news-description">Contact:9994685337</p>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Apply.html">APPLY NOW</a></button>
+      <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/Rating.html">RATE THIS</a></button>
+      
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code for any dynamic behavior
+  
+    // Example: Fetching news data from an API
+    fetch('https://example.com/api/news')
+      .then(response => response.json())
+      .then(data => {
+        // Process the fetched data and update the HTML accordingly
+        
+        // Example: Loop through the news items and create HTML elements
+        data.forEach(newsItem => {
+          const newsItemElement = document.createElement('div');
+          newsItemElement.className = 'news-item';
+          
+          const titleElement = document.createElement('h2');
+          titleElement.className = 'news-title';
+          titleElement.textContent = newsItem.title;
+          
+          const descriptionElement = document.createElement('p');
+          descriptionElement.className = 'news-description';
+          descriptionElement.textContent = newsItem.description;
+          
+          newsItemElement.appendChild(titleElement);
+          newsItemElement.appendChild(descriptionElement);
+          
+          document.querySelector('.content').appendChild(newsItemElement);
+        });
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  </script>
+</body>
+</html>

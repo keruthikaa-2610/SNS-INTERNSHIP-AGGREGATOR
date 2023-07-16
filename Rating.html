@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rating Internship</title>
+  <style>
+    /* CSS styling for the rating page */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .header {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .content {
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .rating-container {
+      display: inline-block;
+    }
+    
+    .rating-star {
+      font-size: 30px;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .rating-star:hover,
+    .rating-star.active {
+      color: #4caf50;
+    }
+    
+    .rating-label {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      color:#4caf50;
+    }
+  #bio{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    color: #4caf50;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>RATING INTERNSHIP</h1> 
+    <button><a href="file:///C:/Users/Admin/Desktop/Work/Java%20Learning/Fundamentals/home.html">Back--</a></button>
+  
+  </div>
+  
+  <div class="content">
+    <div class="rating-container">
+      <span class="rating-star">&#9733;</span>
+      <span class="rating-star">&#9733;</span>
+      <span class="rating-star">&#9733;</span>
+      <span class="rating-star">&#9733;</span>
+      <span class="rating-star">&#9733;</span>
+      <p class="rating-label">Rate this page</p>
+    </div>
+    <div>
+    <label id="bio">WORK EXPERIENCE AND STIPENED</label>
+      <textarea id="bio"></textarea>
+      </div>
+  </div>
+  
+  <script>
+    // JavaScript code for handling rating selection
+    const ratingStars = document.querySelectorAll('.rating-star');
+    const ratingContainer = document.querySelector('.rating-container');
+    const ratingLabel = document.querySelector('.rating-label');
+    let selectedRating = 0;
+    
+    ratingContainer.addEventListener('click', event => {
+      const clickedStar = event.target;
+      
+      // Reset the selectedRating and remove 'active' class from all stars
+      ratingStars.forEach(star => {
+        star.classList.remove('active');
+      });
+      
+      // Set the selectedRating and add 'active' class to clicked star and previous stars
+      for (let i = 0; i < ratingStars.length; i++) {
+        const star = ratingStars[i];
+        
+        if (star === clickedStar) {
+          selectedRating = i + 1;
+          star.classList.add('active');
+          break;
+        }
+        
+        star.classList.add('active');
+      }
+      
+      // Update the rating label with the selected rating
+      ratingLabel.textContent = `You rated this page: ${selectedRating} star(s)`;
+    });
+  </script>
+</body>
+</html>
